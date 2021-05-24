@@ -1,0 +1,13 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  ntx-url:  # id of input
+    description: 'Request URL to performe testing on ntx '
+    required: true
+    default: 'World'
+outputs:
+  status: # id of output
+    description: 'The state of the test'
+runs:
+  using: 'node12'
+  main: 'index.js'
