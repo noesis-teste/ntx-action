@@ -6,14 +6,13 @@ const https = require('https')
 
 try {
     // `who-to-greet` input defined in action metadata file
-    const nameToGreet = core.getInput('ntx-url');
-    console.log(`CURL to ${nameToGreet}!`);
+    const ntxURL = core.getInput('ntx-url');
+    console.log(`Web request to ${ntxURL}!`);
     const time = (new Date()).toTimeString();
     core.setOutput("status", time);
 
     const options = {
-        hostname: 'https://reqbin.com',
-        path: '/echo/get/json',
+        hostname: ntxURL,
         method: 'GET'
       }
 
@@ -21,7 +20,7 @@ try {
         console.log(`statusCode: ${res.statusCode}`)
       
         res.on('data', d => {
-          process.stdout.write(d)
+          console.log(d)
         })
       })
       
@@ -31,7 +30,7 @@ try {
 
     req.end();
 
-
+    console.log('End of web request');
 
     // Get the JSON webhook payload for the event that triggered the workflow
     const payload = JSON.stringify(github.context.payload, undefined, 2)
