@@ -13,21 +13,21 @@ const axios = require('axios');
 
 
 
-      try {
-        const response = await axios.get('https://reqbin.com/echo/get/json')
-        console.log("ntx-url: " + response.data);
-        console.log("sucess: " + response.data.success);
-      } catch (error) {
-        console.log(error.response.body);
-      }
+    try {
+      const response = await axios.get('https://reqbin.com/echo/get/json')
+      console.log("ntx-url: " + response.data);
+      console.log("sucess: " + response.data.success);
+    } catch (error) {
+      console.log(error.response.body);
+    }
 
 
 
     console.log('End of web request');
 
     // Get the JSON webhook payload for the event that triggered the workflow
-    const payload = JSON.stringify(github.context.payload, undefined, 2)
-    console.log(`The event payload: ${payload}`);
+    //const payload = JSON.stringify(github.context.payload, undefined, 2)
+    //console.log(`The event payload: ${payload}`);
   } catch (error) {
     core.setFailed(error.message);
   }
