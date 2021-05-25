@@ -1,0 +1,13 @@
+name: Test NTX
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run test on NTX
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ./
