@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set the input
         uses: ./
-          with:
-            ntx-url: 'https://reqbin.com/echo/get/json'
+        with:
+          ntx-url: 'https://reqbin.com/echo/get/json'
 
       - name: Get the output
         run: echo "The test was ${{ steps.ntx.outputs.status}}"
