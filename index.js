@@ -19,9 +19,31 @@ const axios = require('axios');
       console.log("sucess: " + response.data.success);
     } catch (error) {
       console.log(error.response.body);
+      core.setFailed("Error getting execution ID");
+      return;
     }
 
 
+    //Start looping until response comes
+    do{
+
+      //Wait for X seconds
+      await sleep(20 * 1000);
+
+      //Ask for status of execution
+      try {
+        const response = await axios.get('https://reqbin.com/echo/get/json')
+        console.log("ntx-url: " + response.data);
+        console.log("sucess: " + response.data.success);
+      } catch (error) {
+        console.log(error.response.body);
+        core.setFailed("Error getting execution ID");
+        return;
+      }
+
+
+
+    }while(response.data.success != "true" || response.data.success != true)
 
     console.log('End of web request');
 
