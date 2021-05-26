@@ -23,8 +23,14 @@ function sleep(ms) {
     //http://localhost:8084/NTX/ntxWebService?LinkID=88&TypeID=1&MachineID=71&RepositoryID=3&ProjectID=10100&Version=10100&Cycle=PDT-2396&UserId=14&ServerURL=3&EnvironmentId=5
 
     // http://localhost:8084/NTX/ntxWebService?LinkID=89&TypeID=1&MachineID=71&RepositoryID=2&ProjectID=3dd5ff83-ecdc-465a-acea-fc7847ba5878&Version=3292&Cycle=3293&UserId=14&ServerURL=5&EnvironmentId=5&Collection=DefaultCollection&Token=3ztvxjlqiguamhcl7y4eo4tfvx2gtqiseqglwxhyowyuzcm3f32a
+
+    // http://srvwp15.westeurope.cloudapp.azure.com:8084/
+    // http://172.30.160.1:8084/NTX/ntxWebService
+
+    // http://srvwp15.westeurope.cloudapp.azure.com:8084/NTX/ntxWebService?LinkID=178&TypeID=1&MachineID=132&RepositoryID=2&ProjectID=0bd5b276-08aa-4cd7-b6c1-0f18b7bcf951&Version=92&Cycle=93&UserId=46&ServerURL=18&EnvironmentId=8&Collection=DefaultCollection&Token=qafbanqku4ckwt4jnt7lcretgvfqpo4nthacvoixsvbhnryql2ua
+
   //  try {
-      const response = await axios.get('http://172.30.160.1:8084/NTX/ntxWebService?LinkID=89&TypeID=1&MachineID=71&RepositoryID=2&ProjectID=3dd5ff83-ecdc-465a-acea-fc7847ba5878&Version=3292&Cycle=3293&UserId=14&ServerURL=5&EnvironmentId=5&Collection=DefaultCollection&Token=3ztvxjlqiguamhcl7y4eo4tfvx2gtqiseqglwxhyowyuzcm3f32a', {
+      const response = await axios.get('http://srvwp15.westeurope.cloudapp.azure.com:8084/NTX/ntxWebService?LinkID=178&TypeID=1&MachineID=132&RepositoryID=2&ProjectID=0bd5b276-08aa-4cd7-b6c1-0f18b7bcf951&Version=92&Cycle=93&UserId=46&ServerURL=18&EnvironmentId=8&Collection=DefaultCollection&Token=qafbanqku4ckwt4jnt7lcretgvfqpo4nthacvoixsvbhnryql2ua', {
         auth: {
           username: 'alho',
           password: 'admin'
@@ -63,7 +69,7 @@ function sleep(ms) {
       }
       
       //Ask for status of execution
-      const response = await axios.get(`http://172.30.160.1:8084/NTX/ntxWebService?GetStatusId=${id}`, {
+      const response = await axios.get(`http://srvwp15.westeurope.cloudapp.azure.com:8084/NTX/ntxWebService?GetStatusId=${id}`, {
         auth: {
           username: 'alho',
           password: 'admin'
