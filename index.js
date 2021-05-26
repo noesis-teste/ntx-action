@@ -123,6 +123,10 @@ function sleep(ms) {
           isComplete = true;
           core.setFailed("Device doesn't exist");
           break;
+        case -8 :
+          isComplete = true;
+          core.setFailed("Disconnected Machine");
+          break;
 
         default:
           isComplete = true;
