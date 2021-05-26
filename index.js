@@ -11,7 +11,7 @@ function sleep(ms) {
   try {
     // GET NTX URL from input
     const ntxURL = core.getInput('ntx-url');
-    console.log(`Web request to`);
+    console.log(`Web request to dfgd`);
     //const time = (new Date()).toTimeString();
     //core.setOutput("status", time);
 
