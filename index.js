@@ -36,7 +36,7 @@ function sleep(ms) {
 
     const { id } = response.data;
 
-    if (id == -1){
+    if (id == undefined || id == -1){
       core.info(response.data);
       core.setFailed("Error getting execution ID");
       return;
