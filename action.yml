@@ -18,11 +18,9 @@ inputs:
     description: 'Time in seconds between getStatus request'
     required: true
     default: 20
-    
 outputs:
   status: # id of output
     description: 'The state of the test'
-
 runs:
   using: 'node12'
   main: 'index.js'
