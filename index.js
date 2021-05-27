@@ -42,7 +42,7 @@ function sleep(ms) {
       return;
     }
 
-    console.log("Execution ID: " + id);
+    console.log("Execution created with ID: " + id);
 
     let isComplete = false;
     //Start looping until execution finishes
@@ -131,6 +131,8 @@ function sleep(ms) {
     }while( !isComplete );
 
     console.log('End of NTX Action');
+
+    core.setOutput("status", message);
 
   } catch (error) {
     core.setFailed(error.message);
