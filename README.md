@@ -11,7 +11,7 @@ Testing on NTX - GitHub Action
 **Required** The URI of for the request.
 
 ### `username`
-**Required** The MTX username.
+**Required** The NTX username.
 
 ### `password`
 **Required** The NTX password.
@@ -27,13 +27,12 @@ The message with result of the test
 
 ## Example usage
 
-`
-uses: actions/ntx-action@v2
-with:
-  domain: 'http://localhost:8080'
-  uri: '/NTX/ntxWebService?LinkID=178&TypeID=1...'
-  username: foo
-  passwrod: xpto
-  wait-time: 10
-  
-`
+
+**uses:** noesis-teste/ntx-action@v2
+**with:**
+&ensp; **domain:** 'http://localhost:8080'
+&ensp; **uri:** '/NTX/ntxWebService?LinkID=178&TypeID=1...'
+&ensp; **username:** foo
+&ensp; **passwrod:** xpto
+&ensp; **wait-time:** 10
+
