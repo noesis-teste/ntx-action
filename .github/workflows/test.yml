@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Start NTS test
+      - name: Start NTX test
         uses: ./
         with:
           domain: 'http://srvwp15.westeurope.cloudapp.azure.com:8084'
