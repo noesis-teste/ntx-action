@@ -22,3 +22,5 @@ jobs:
 
       - name: Get the output
         run: echo "The test was ${{ steps.ntx.outputs.status}}"
+
+        #Teste
