@@ -44,6 +44,7 @@ function sleep(ms) {
 
     console.log("Execution created with ID: " + id);
 
+    let message;
     let isComplete = false;
     //Start looping until execution finishes
     do{
@@ -65,7 +66,7 @@ function sleep(ms) {
       })
       
       const code = response.data.status_code;
-      const message = response.data.message;
+      message = response.data.message;
       //const execution_link = response.data.execution_link;
 
       console.log("Code: " + code);

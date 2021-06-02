@@ -14,8 +14,8 @@ jobs:
       - name: Start NTX test
         uses: ./
         with:
-          domain: 'http://srvwp15.westeurope.cloudapp.azure.com:8084'
-          uri: '/NTX/ntxWebService?LinkID=178&TypeID=1&MachineID=132&RepositoryID=2&ProjectID=0bd5b276-08aa-4cd7-b6c1-0f18b7bcf951&Version=92&Cycle=93&UserId=46&ServerURL=18&EnvironmentId=8&Collection=DefaultCollection&Token=qafbanqku4ckwt4jnt7lcretgvfqpo4nthacvoixsvbhnryql2ua'
+          domain: 'http://srvwp15.westeurope.cloudapp.azure.com:8084/NTX'
+          uri: '/ntxWebService?LinkID=149&TypeID=1&MachineID=132&RepositoryID=3&ProjectID=10600&Version=10800&Cycle=PROJ2021-1&UserId=46&ServerURL=3&EnvironmentId=8'
           username: 'alho'
           password: ${{ secrets.NTX_PASSWORD }}
           wait-time: 10
