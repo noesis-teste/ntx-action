@@ -58,7 +58,7 @@ function sleep(ms) {
       }
       
       //Ask for status of execution
-      const response = await axios.get(`${domain}/NTX/ntxWebService?GetStatusId=${id}`, {
+      const response = await axios.get(`${domain}/ntxWebService?GetStatusId=${id}`, {
         auth: {
           username: username,
           password: password
