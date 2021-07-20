@@ -9,13 +9,16 @@ jobs:
     name: Run test on NTX
     runs-on: ubuntu-latest
 
+
+    #http://srvwp15.westeurope.cloudapp.azure.com:8084/NTX/ntxWebService?LinkID=149&TypeID=1&MachineID=132&RepositoryID=3&ProjectID=10100&Version=10000&Cycle=PROJNTX-1&UserId=46&ServerURL=3&EnvironmentId=8
+    
     steps:
       - uses: actions/checkout@v2
       - name: Start NTX test
         uses: ./
         with:
           domain: 'http://srvwp15.westeurope.cloudapp.azure.com:8084/NTX'
-          uri: '/ntxWebService?LinkID=149&TypeID=1&MachineID=132&RepositoryID=3&ProjectID=10600&Version=10800&Cycle=PROJ2021-1&UserId=46&ServerURL=3&EnvironmentId=8'
+          uri: '/ntxWebService?LinkID=149&TypeID=1&MachineID=132&RepositoryID=3&ProjectID=10100&Version=10000&Cycle=PROJNTX-1&UserId=46&ServerURL=3&EnvironmentId=8'
           username: 'alho'
           password: ${{ secrets.NTX_PASSWORD }}
           wait-time: 10
