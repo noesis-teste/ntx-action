@@ -22,7 +22,7 @@ function sleep(ms) {
     console.log(`Web request to ${domain}${uri}`);
     const url = `${domain}${uri}`
 
-    //USED for debug porposes
+    //USED for debug
     //const username = 'alho';
     //const password = 'admin';
     //const wait_time = 20;
