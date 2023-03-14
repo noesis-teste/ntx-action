@@ -11,15 +11,15 @@ jobs:
 
 
     #http://srvwp15.westeurope.cloudapp.azure.com:8084/NTX/ntxWebService?LinkID=149&TypeID=1&MachineID=132&RepositoryID=3&ProjectID=10100&Version=10000&Cycle=PROJNTX-1&UserId=46&ServerURL=3&EnvironmentId=8
-    
+    #http://srvwd41.westeurope.cloudapp.azure.com:8084/NTX/ntxWebService?LinkID=175
     steps:
       - uses: actions/checkout@v2
       - name: Start NTX test
         uses: ./
         with:
-          domain: 'http://srvwp15.westeurope.cloudapp.azure.com:8084/NTX'
-          uri: '/ntxWebService?LinkID=149&TypeID=1&MachineID=132&RepositoryID=3&ProjectID=10100&Version=10000&Cycle=PROJNTX-1&UserId=46&ServerURL=3&EnvironmentId=8'
-          username: 'alho'
+          domain: 'http://srvwd41.westeurope.cloudapp.azure.com:8084/NTX'
+          uri: '/ntxWebService?LinkID=175'
+          username: 'admin'
           password: ${{ secrets.NTX_PASSWORD }}
           wait-time: 10
 
