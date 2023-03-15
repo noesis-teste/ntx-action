@@ -1,5 +1,4 @@
 name: Test NTX
-
 on:
   push:
     branches: [ main ]
